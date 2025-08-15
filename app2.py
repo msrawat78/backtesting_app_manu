@@ -193,7 +193,7 @@ def main():
     }
     </style>
     
-    <div class="tooltip">ℹ️
+    <div class="tooltip">ℹ️ About this strategy
         <span class="tooltiptext">
           The Golden Cross strategy is a bullish technical pattern used in stock trading.<br><br>
           It occurs when a short-term moving average (blue line) crosses above a long-term moving average (orange line), often interpreted as a sign of a potential uptrend.<br><br>
@@ -262,6 +262,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
