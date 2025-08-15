@@ -208,7 +208,7 @@ def main():
     st.bokeh_chart(p, use_container_width=True)
 
     # show the exact data that feeds the chart
-    with st.expander():
+    with st.expander(""):
         df_display = df.reset_index()
         # Ensure the first column is named 'Date' for clarity
         if 'Date' not in df_display.columns:
@@ -260,6 +260,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
