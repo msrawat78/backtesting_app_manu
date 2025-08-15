@@ -1,5 +1,6 @@
+--force-reinstall bokeh==2.4.3
 streamlit>=1.25.0
 pandas>=2.0.0
 yfinance>=0.2.27
-bokeh>=2.4.3
 feedparser>=6.0.10
+
