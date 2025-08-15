@@ -133,15 +133,3 @@ div.block-container { padding-top: 0.5rem !important; }
 .circle-neutral { background-color: #6c757d; }
 
 /* Keep Bokeh untouched: NO .bk-* rules here */
-
-st.markdown(
-    """
-    <style>
-    /* Hide the fallback text of expander arrow */
-    .stExpander [data-testid="stExpanderHeader"] > div > span:last-child {
-        display: none;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
