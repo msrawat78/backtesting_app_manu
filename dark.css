@@ -1,0 +1,134 @@
+/* dark.css */
+
+/* 0) Font: Montserrat everywhere */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* 1) Color system for dark theme */
+:root{
+  --aquamarine:   #3acfb3;  /* darker, still vibrant */
+  --fluor-cyan:   #1eb2b4;
+  --vivid-sky:    #1a9bd4;
+  --chef-blue:    #a8c8ff; /* base text - lightened */
+  --crayola:      #82a3ff; /* headings - lightened */
+
+  --txt:          var(--chef-blue);
+  --heading:      var(--crayola);
+  --sidebar-bg:   #1f2937; /* dark navy-gray */
+  --card-bg:      #2d3748; /* dark slate */
+  --card-hover:   #4a5568; /* slightly lighter */
+}
+
+/* 2) Global font & base colors */
+html, body, .stApp, .main, .block-container {
+  background-color: #121212 !important; /* dark base */
+  color: var(--txt) !important;
+  font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji' !important;
+}
+
+/* Ensure most Streamlit text widgets inherit same font + color */
+.stMarkdown, .stText, .stTextInput, .stNumberInput, .stSelectbox, .stDateInput,
+.stCheckbox, .stRadio, .stDataFrame, .stMetric, .stAlert, label, p, li, small, span, code, pre {
+  font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji' !important;
+  color: var(--txt) !important;
+}
+
+/* Links */
+a, a:visited { color: var(--heading) !important; text-decoration: none; }
+a:hover { opacity: 0.85; }
+
+/* 3) Headings */
+h1, h2, h3, .markdown-text-container h2 {
+  color: var(--heading) !important;
+  font-weight: 700 !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* 4) Sidebar */
+section[data-testid="stSidebar"] {
+  background-color: var(--sidebar-bg) !important;
+  color: var(--txt) !important;
+}
+section[data-testid="stSidebar"] * {
+  color: var(--txt) !important;
+}
+/* fallback */
+.sidebar .sidebar-content {
+  background-color: var(--sidebar-bg) !important;
+  color: var(--txt) !important;
+}
+
+/* Sidebar inputs - dark style */
+section[data-testid="stSidebar"] input,
+section[data-testid="stSidebar"] select,
+section[data-testid="stSidebar"] textarea {
+  background-color: #2d3748 !important;
+  color: #e2e8f0 !important;
+  border: 1px solid #4a5568 !important;
+}
+
+/* 5) Metrics */
+.stMetric, [data-testid="stMetricValue"], [data-testid="stMetricLabel"] {
+  color: var(--txt) !important;
+  font-family: 'Montserrat' !important;
+}
+
+/* Custom metric card */
+.metric-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  color: var(--txt);
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+.metric-card:hover {
+  background-color: var(--card-hover);
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+.metric-card h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--heading);
+}
+.metric-card p {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--txt);
+}
+
+/* 6) Layout polish */
+body { overflow-x: hidden; }
+div.block-container { padding-top: 0.5rem !important; }
+
+/* Sentiment legend styles */
+.sentiment-legend {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.sentiment-item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--txt);
+}
+
+.sentiment-circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.circle-positive { background-color: #28a745; }
+.circle-negative { background-color: #dc3545; }
+.circle-neutral { background-color: #6c757d; }
+
+/* Keep Bokeh untouched */
