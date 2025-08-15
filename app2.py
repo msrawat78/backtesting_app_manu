@@ -163,16 +163,17 @@ def main():
     .tooltip {
       position: relative;
       display: block;
-      text-align: center; /* Center horizontally */
+      text-align: left; 
       margin-bottom: 10px;
-      font-size: 18px;
+      margin-top: 10px;
+      font-size: 12px;
       cursor: help;
     }
     
     .tooltip .tooltiptext {
       visibility: hidden;
       width: 600px;
-      background-color: #333;
+      background-color: #ccdbfd;
       color: #fff;
       text-align: left;
       border-radius: 6px;
@@ -180,7 +181,7 @@ def main():
       position: absolute;
       z-index: 1;
       top: 30px; /* Position below the icon */
-      left: 50%;
+      left: 25%;
       transform: translateX(-50%); /* Keep tooltip centered */
       opacity: 0;
       transition: opacity 0.3s;
@@ -261,6 +262,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
